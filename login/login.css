@@ -1,0 +1,31 @@
+body {
+	background-image: url(../images/bg-bnr.png);
+	background-size: cover;
+}
+
+.login h1 a {
+	background-image: url(../images/logo.png);
+	margin:0;
+	width: 100%;
+	background-size: 201px;
+	height: 92px;
+}
+
+#wp-submit {
+	background: #940000;
+	border: solid 0px #ff0;
+	box-shadow: none;
+	text-shadow: none;
+}
+.login #backtoblog, .login #nav {
+	text-align: center;
+}
+.login #backtoblog a, .login #nav a, .login #backtoblog a:hover, .login #nav a:hover {
+	color: white;
+}
+
+#loginform {
+	-webkit-box-shadow: 0px 17px 55px -7px rgba(0,0,0,0.28);
+-moz-box-shadow: 0px 17px 55px -7px rgba(0,0,0,0.28);
+box-shadow: 0px 17px 55px -7px rgba(0,0,0,0.28);
+}
