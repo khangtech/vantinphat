@@ -92,15 +92,20 @@ if( !is_user_logged_in() ) {
 
            <form method="post">
 
+           <h3 class="sh-dot">Phương án gọi vốn</h3>
+           
+           
         <div class="box-cnt clearfix">
-          <h2>Bạn cũng đang thích sản phẩm này? Chúng tôi sẳn sàng chia sẽ cơ hội để hợp tác thành công</h2>
-          <h3 class="sh-dot">Phương án gọi vốn</h3>
-          <div class="wrap-col clearfix">
+          
+          <div class="clearfix">
             <div class="wrap-input description">
                 <?php the_content(); ?>
             </div>
           </div>
-          <div class="wrap-col clearfix">
+
+        </div>
+
+        <div class="wrap-col clearfix">
             <div class="wrap-lable">Tổng nhu cầu vốn</div>
             <div class="wrap-input wrap-input2">
               <div class="price"><?php the_field('nhu_cau_goi_von'); ?></div>
@@ -126,7 +131,8 @@ if( !is_user_logged_in() ) {
             <button class="bookmark" type="submit" name="shark">Góp vốn</button>
             <a class="calltobuy" href="tel:<?php the_field('company_hotline', 'option') ?>">Trao đổi</a>
           </div>
-        </div>
+
+
 
            <input name="doShark" type="hidden" value="1">
               <input type="hidden" name="sharktank_id" value="<?php echo get_the_ID(); ?>">

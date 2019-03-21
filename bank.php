@@ -50,13 +50,8 @@ thể trả hàng tháng " />
             </div>
             <div class="wrap-2col-r clearfix">
               <div class="wrap-input">
-                <div class="select-style">
-                  <select name="cboPhapLyTaiSan" id="cboPhapLyTaiSan">
-                    <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chọn pháp lý tài sản mua</option>
-                     <option value="Nhà có sổ hồng">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà có sổ hồng</option>
-                    <option value="Nhà vi bằng">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà vi bằng</option>
-                  </select>
-                </div>
+              <input type="text" id="txtPhone" name="txtPhone" class="in-txt" <?php echo is_user_logged_in() ? 'disabled' : '' ?> value="<?php echo is_user_logged_in() ? $user_login : ''  ?>" placeholder="Số điện thoại" />
+
               </div>
             </div>
           </div>
@@ -64,13 +59,6 @@ thể trả hàng tháng " />
             <div class="wrap-2col-l clearfix">
                 <div class="wrap-input">
                
-                <input type="text" id="txtPhone" name="txtPhone" class="in-txt" <?php echo is_user_logged_in() ? 'disabled' : '' ?> value="<?php echo is_user_logged_in() ? $user_login : ''  ?>" placeholder="Số điện thoại" />
-
-               
-              </div>
-            </div>
-            <div class="wrap-2col-r clearfix">
-              <div class="wrap-input">
                 <div class="input-file-container">
                   <input id="file" type="file" name="hinh_anh_tai_san[]" class="inputfile" multiple>
                   <label for="file"><img src="<?php echo get_template_directory_uri() ?>/images/ico-da.png" alt="" />Đăng ảnh tài sản thế chấp</label>
@@ -78,8 +66,10 @@ thể trả hàng tháng " />
                    <div id="image_preview"></div>
 
                 </div>
+               
               </div>
             </div>
+           
           </div>
           <div class="btn-sub p50 clearfix">
              <input name="doBank" type="hidden" value="1">
@@ -119,10 +109,7 @@ thể trả hàng tháng " />
 
   
 
-    if ($('#cboPhapLyTaiSan').val() =="0") {
-       alert('Vui lòng chọn tính pháp lý tài sản');
-       return false;
-    } 
+ 
 
     if ($('#txtSoTienTraHangThang').val() =="") {
        alert('Vui lòng nhập số tiền trả hàng tháng');

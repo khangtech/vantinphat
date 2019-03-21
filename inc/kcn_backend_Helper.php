@@ -1967,7 +1967,7 @@ function kcn_show_bat_dong_san() {
     
                     <p>         
                         <?php _e('Tên khách hàng:', 'kcn')?>
-                        <span><?php echo esc_attr($item['client_name'])?></span>
+                        <span><?php echo $item['user_id'] > 0 ? esc_attr($item['client_name']) : 'Khách vãng lai'?></span>
                     </p>
                     <p> 
                         <?php _e('Số điện thoại:', 'kcn')?>
@@ -2126,7 +2126,7 @@ function kcn_show_ngan_hang() {
 
         $item = $default;
         if (isset($_REQUEST['id'])) {
-            $item = $wpdb->get_row($wpdb->prepare("SELECT B.*, U.display_name as client_name, U.user_login as client_phone FROM $table_name B inner join $table_user U on B.user_id = U.id WHERE B.id = %d", $_REQUEST['id']), ARRAY_A);
+            $item = $wpdb->get_row($wpdb->prepare("SELECT B.*, U.display_name as client_name, U.user_login as client_phone, B.user_phone as guest_phone FROM $table_name B left join $table_user U on B.user_id = U.id WHERE B.id = %d", $_REQUEST['id']), ARRAY_A);
             if (!$item) {
                 $item = $default;
                 $notice = __('Item not found', 'kcn');
@@ -2163,7 +2163,7 @@ function kcn_show_ngan_hang() {
     
                     <p>         
                         <?php _e('Tên khách hàng:', 'kcn')?>
-                        <span><?php echo esc_attr($item['client_name'])?></span>
+                        <span><?php echo $item['user_id'] > 0 ? esc_attr($item['client_name']) : 'Khách vãng lai' ?></span>
                     </p>
                     <p> 
                         <?php _e('Số điện thoại:', 'kcn')?>
@@ -2188,11 +2188,7 @@ function kcn_show_ngan_hang() {
 
                     
 
-                     <p> 
-                        <?php _e('Pháp lý tài sản: ', 'kcn')?>
-                        <span><?php echo esc_attr($item['phap_ly_tai_san'])?></span>
-                    </p>
-
+                    
 
              <p> 
                         <?php _e('Số tiền trả hàng tháng: ', 'kcn')?>

@@ -181,7 +181,8 @@
 			//$lich_su_tin_dung = sanitize_text_field($_POST['cboLichSuTinDung']);
 
 			$lich_su_tin_dung = "";
-			$phap_ly_tai_san = sanitize_text_field($_POST['cboPhapLyTaiSan']);
+		//	$phap_ly_tai_san = sanitize_text_field($_POST['cboPhapLyTaiSan']);
+			$phap_ly_tai_san = "";
 			$so_tien_tra_hang_thang = sanitize_text_field($_POST['txtSoTienTraHangThang']);
 
 			
