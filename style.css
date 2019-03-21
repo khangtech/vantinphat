@@ -140,6 +140,7 @@ body {
 	color: #fff;
 	padding-right: 20px;
 	padding-left: 20px;
+	padding-bottom: 20px;
 }
 .select-style {
 	padding: 0;
@@ -311,6 +312,10 @@ span.wpcf7-not-valid-tip {
 }
 
 
+.erf-container button {
+	margin-left: 240px !important;
+}
+
 #mySurvey {
 	margin-top: 30px;
 }
@@ -390,6 +395,14 @@ span.wpcf7-not-valid-tip {
 	.error{
 	float: none;
 	width: 100%;
+	}
+
+	.erf-container button {
+		margin: 0px auto !important;
+	}
+
+	.erf-submit-button {
+		text-align: center;
 	}
 }
 
@@ -974,6 +987,19 @@ span.wpcf7-not-valid-tip {
 
 .description {
 	text-align: justify !important;
+	border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 10px;
+    line-height: normal;
+    outline: none;
+    font-weight: 400;
+    color: #3c3c3c;
+    height: 126px;
+    overflow: auto;
+    resize: none;
 }
 
 
@@ -1483,10 +1509,11 @@ span.wpcf7-not-valid-tip {
 	margin-top: 15px;
 	text-align: center;
 }
-.btn-sub button, .btn-sub .calltobuy {
-	border: 1px solid #a91700;
-	border-bottom: 3px solid #a91700;
-	color: #7d0404;
+
+.erf-container button {
+	border: 1px solid #a91700 !important;
+	border-bottom: 3px solid #a91700 !important;
+	color: #7d0404 !important;
 	text-transform: uppercase;
 	display: inline-block;
 	width: 130px;
@@ -1494,7 +1521,28 @@ span.wpcf7-not-valid-tip {
 	border-radius: 15px;
 	line-height: 30px;
 	text-decoration: none;
-	background: #fff;
+	background: #fff !important;
+	font-weight: 700;
+	margin: 0 5px;
+	font-size: 13px;
+}
+
+.erf-container button:hover {
+	background: #ffb400 !important;
+}
+
+.btn-sub button, .btn-sub .calltobuy {
+	border: 1px solid #a91700 !important;
+	border-bottom: 3px solid #a91700 !important;
+	color: #7d0404 !important;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 130px;
+	height: 35px;
+	border-radius: 15px;
+	line-height: 30px;
+	text-decoration: none;
+	background: #fff !important;
 	font-weight: 700;
 	margin: 0 5px;
 	font-size: 13px;
@@ -1822,6 +1870,23 @@ span.wpcf7-not-valid-tip {
 }
  @media (max-width: 767px) {
 
+	.project-top-lst li {
+		width: 47.7777%;
+		margin-right: 2%;
+		margin-bottom: 2%;
+	}
+
+	.project-top-lst {
+		max-width: 85%;
+	}
+
+	.search .select-style {
+		float: left;
+
+	}
+	.select-style {
+		width: 46% !important;
+	}
 
 
 .bookmark, .not_login {
@@ -1842,9 +1907,7 @@ span.wpcf7-not-valid-tip {
 	width: 100%;
 	margin-top: 20px;
 }
-.project-top-lst li {
-	width: 50%;
-}
+
 .project h2 {
 	margin: 20px 0;
 	font-size: 24px;

@@ -16,7 +16,7 @@
           <div class="txt">Chọn sản phẩm theo quận/huyện hoặc theo khung giá</div>
           <div class="select-style">
             <select name="optSelect" id="optSelect">
-              <option value="0">------------ Quận ---------</option>
+              <option value="0">Chọn quận</option>
               <option value="760">Quận 1</option>
               <option value="769">Quận 2</option>
               <option value="770">Quận 3</option>
@@ -47,7 +47,7 @@
           </div>
           <div class="select-style">
             <select name="optKhungGia" id="optKhungGia">
-              <option value="0">---------- Giá bán ----------</option>
+              <option value="0">Chọn giá bán</option>
               <option value="1">Dưới 1 tỉ</option>
               <option value="2">Từ 1 - 2 tỉ</option>
               <option value="3">Từ 2 - 5 tỉ</option>

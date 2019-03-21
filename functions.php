@@ -194,7 +194,15 @@ function prefix_hide_personal_options() {
 			jQuery("h3:contains('User Login History')").next('.form-table').remove();
             jQuery("h3:contains('User Login History')").remove();
 
-			JQuery('.user-url-wrap').remove();
+
+			jQuery("h3:contains('Activate User')").next('.form-table').remove();
+            jQuery("h3:contains('Activate User')").remove();
+			jQuery("h2:contains('Tên')").remove();
+			jQuery('.faulh-form-table').remove();
+			jQuery('.user-url-wrap').remove();
+			jQuery("h2:contains('Thông tin liên hệ')").remove();
+			
+			
        
        
 

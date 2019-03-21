@@ -115,8 +115,8 @@
             <div class="acc-lst">
              
               <ul>
-                <!-- <li><a href="#"><img src="<?php //echo get_template_directory_uri() ?>/images/ico-tindaluu.png" alt="" />Tin đã lưu</a></li> -->
-                <li><a href="<?php echo admin_url('profile.php') ?>"><img src="<?php echo get_template_directory_uri() ?>/images/ico-ttcanhan.png" alt="" />Thông tin cá nhân</a></li>
+              <li><a href="<?php echo admin_url('profile.php') ?>"><img src="<?php echo get_template_directory_uri() ?>/images/ico-ttcanhan.png" alt="" />Thông tin cá nhân</a></li>
+                 <li><a href="<?php echo admin_url('/admin.php?page=kcn_change_pass') ?>"><img src="<?php echo get_template_directory_uri() ?>/images/ico-tindaluu.png" alt="" />Đổi mật khẩu</a></li> 
                 <li><a href="<?php echo wp_logout_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/ico-dangxuat.png" alt="" />Đăng xuất</a></li>
               </ul>
             </div>
