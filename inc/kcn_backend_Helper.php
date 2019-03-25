@@ -197,7 +197,7 @@ function kcn_filter_product() {
               $quan = get_field('district');
               $gia_ban = get_field('sell_price');
               $thuong_luong = (get_field('negotiation') == true) ? 'thương lượng'  : 'cố định';
-              $tra_gia = get_field('buy_price');
+              $tra_gia = (get_field('buy_price') <> '') ? get_field('buy_price') . ' tỉ' : '-'  ;
               $id = get_the_ID();
               $masp = get_the_title();
 
@@ -221,8 +221,8 @@ function kcn_filter_product() {
 
              $grid_hot_row = $grid_hot_row . ' <tr class="hot">
               <td>' .     $detail_link . '</td>
-              <td>' . $quan . '</td>
-              <td>' . $gia_ban . '</td>
+              <td>' . $quan . ' </td>
+              <td>' . $gia_ban . ' tỉ</td>
               <td>' . $thuong_luong . '</td>
               <td class="m-hide">' . $tra_gia . '</td>
               <td class="m-hide">' . $bookmark_button . '</td>
@@ -341,7 +341,9 @@ function kcn_filter_product() {
               $quan = get_field('district');
               $gia_ban = get_field('sell_price');
               $thuong_luong = (get_field('negotiation') == true) ? 'thương lượng'  : 'cố định';
-              $tra_gia = get_field('buy_price');
+             // $tra_gia = get_field('buy_price');
+             $tra_gia = (get_field('buy_price') <> '') ? get_field('buy_price') . ' tỉ' : '-'  ;
+
               $id = get_the_ID();
               $masp = get_the_title();
 
@@ -366,7 +368,7 @@ function kcn_filter_product() {
              $grid_normal_row = $grid_normal_row . ' <tr>
               <td>' .     $detail_link . '</td>
               <td>' . $quan . '</td>
-              <td>' . $gia_ban . '</td>
+              <td>' . $gia_ban . ' tỉ</td>
               <td>' . $thuong_luong . '</td>
               <td class="m-hide">' . $tra_gia . '</td>
               <td class="m-hide">' . $bookmark_button . '</td>
@@ -842,7 +844,7 @@ class SharkTank_List_Table extends WP_List_Table
 
         $actions = array(
             //'edit' => sprintf('<a href="?page=contacts_form&id=%s">%s</a>', $item['id'], __('Edit', 'kcn')),
-           // 'delete' => sprintf('<a href="?page=%s&action=delete&id=%s">%s</a>', $_REQUEST['page'], $item['id'], __('Xóa', 'kcn')),
+            'delete' => sprintf('<a href="?page=%s&action=delete&id=%s">%s</a>', $_REQUEST['page'], $item['id'], __('Xóa', 'kcn')),
         );
 
         return sprintf('%s %s',
@@ -910,13 +912,14 @@ class SharkTank_List_Table extends WP_List_Table
     function process_bulk_action()
     {
         global $wpdb;
-        $table_name = $wpdb->prefix . 'product_bid'; 
+        $table_name = $wpdb->prefix . 'sharktank_bid'; 
 
         if ('delete' === $this->current_action()) {
             $ids = isset($_REQUEST['id']) ? $_REQUEST['id'] : array();
             if (is_array($ids)) $ids = implode(',', $ids);
 
             if (!empty($ids)) {
+                //echo "DELETE FROM $table_name WHERE id IN($ids)";
                 $wpdb->query("DELETE FROM $table_name WHERE id IN($ids)");
             }
         }

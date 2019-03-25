@@ -13,7 +13,7 @@
 
        
         <div class="search">
-          <div class="txt">Chọn sản phẩm theo quận/huyện hoặc theo khung giá</div>
+          <div class="txt"><strong>Chọn sản phẩm theo quận/huyện hoặc theo khung giá</strong></div>
           <div class="select-style">
             <select name="optSelect" id="optSelect">
               <option value="0">Chọn quận</option>
@@ -48,9 +48,9 @@
           <div class="select-style">
             <select name="optKhungGia" id="optKhungGia">
               <option value="0">Chọn giá bán</option>
-              <option value="1">Dưới 1 tỉ</option>
-              <option value="2">Từ 1 - 2 tỉ</option>
-              <option value="3">Từ 2 - 5 tỉ</option>
+              <option value="1">Dưới 2 tỉ</option>
+              <option value="2">Từ 2 - 3 tỉ</option>
+              <option value="3">Từ 3 - 5 tỉ</option>
                <option value="4">Từ 5 tỉ trở lên</option>
             </select>
           </div>
@@ -101,6 +101,8 @@
 
               $post_id = get_the_ID();
               $user_id =  get_current_user_id();
+              $tra_gia = (get_field('buy_price') <> '') ? get_field('buy_price') . ' tỉ' : '-'  ;
+
 
               $check_existed_record = $wpdb->get_results("SELECT * FROM $table_bookmarked WHERE post_id = ".$post_id." and user_id=" . $user_id);
 
@@ -121,7 +123,7 @@
               <td><?php the_field('district') ?> </td>
               <td><?php the_field('sell_price') ?> tỉ </td>
               <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'thương lượng'  : 'cố định');  ?></td>
-              <td class="m-hide"><?php the_field('buy_price') ?> tỉ</td>
+              <td class="m-hide"><?php echo $tra_gia; ?></td>
 
               <td class="m-hide"><button type="submit" id="<?php the_ID(); ?>" class="bookmark" data-id="<?php the_ID(); ?>"><?php echo $label; ?></button></td>
 
@@ -134,7 +136,7 @@
               <td ><?php the_field('district') ?> </td>
               <td><?php the_field('sell_price') ?> tỉ </td>
               <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'thương lượng'  : 'cố định');  ?></td>
-              <td class="m-hide"><?php the_field('buy_price') ?> tỉ</td>
+              <td class="m-hide"><?php echo $tra_gia; ?></td>
 
               <td class="m-hide"><a class="not_login" href="<?php echo $login_url; ?>" title="Vui lòng đăng nhập">Lưu tin</a></td>
 
@@ -170,6 +172,8 @@
 
                $post_id = get_the_ID();
               $user_id =  get_current_user_id();
+              $tra_gia = (get_field('buy_price') <> '') ? get_field('buy_price') . ' tỉ' : '-'  ;
+
 
               $check_existed_record = $wpdb->get_results("SELECT * FROM $table_bookmarked WHERE post_id = ".$post_id." and user_id=" . $user_id);
 
@@ -188,7 +192,7 @@
               <td><?php the_field('district') ?> </td>
               <td><?php the_field('sell_price') ?> tỉ</td>
               <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'thương lượng'  : 'cố định');  ?></td>
-              <td class="m-hide"><?php the_field('buy_price') ?> tỉ</td>
+              <td class="m-hide"><?php echo $tra_gia; ?></td>
                 <td class="m-hide"><button type="submit" id="<?php the_ID(); ?>" class="bookmark" data-id="<?php the_ID(); ?>"><?php echo $label; ?></button></td>
             </tr>
 

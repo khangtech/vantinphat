@@ -90,6 +90,19 @@ if( function_exists('acf_add_options_page') ) {
 
 add_action( 'wp_enqueue_scripts' ,'kcn_theme_load_styles_scripts');
 
+
+
+function kcn_user_sort( $query_args ){
+    if( is_admin() && !isset($_GET['orderby']) ) {
+		$query_args->query_vars['orderby'] = 'ID';
+		$query_args->query_vars['order'] = 'DESC';
+    }
+    return $query_args;
+}
+add_action('pre_get_users', 'kcn_user_sort' );
+
+
+
 /*
 function kcn_admin_scripts() {
 
@@ -114,7 +127,7 @@ function kcn_admin_scripts() {
 
 //add_action( 'init', 'kcn_theme_menu' );
 remove_filter('the_content','wpautop');
-//add_filter('the_content', 'nl2br');
+add_filter('the_content', 'nl2br');
 add_image_size('product_photo', 585, 324, true); // Custom Thumbnail Size call using 
 add_image_size('product_thumb_photo', 166, 92, true); // Custom Thumbnail Size call using 
 

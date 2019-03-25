@@ -689,7 +689,7 @@ span.wpcf7-not-valid-tip {
 	min-height: 238px;
 }
 .goivon-r .msg_home p{
-	margin-top: 15px;
+	margin-top: 5px;
 }
 .goivon-r h2, .goivon-r h2 a {
 	text-align: center;
@@ -702,7 +702,20 @@ span.wpcf7-not-valid-tip {
 
 .msg_home p {
 	color: #fff;
-	padding: 20px 0px;
+	padding: 10px 0px;
+}
+
+.msg_home ul {
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+}
+
+.msg_home ul li {
+	list-style-type: circle;
+	padding: 5px 0px;
+	color: #ffffff;
+	font-size: 18px;
+	
 }
 
 .msg_sub p {
@@ -1880,13 +1893,15 @@ span.wpcf7-not-valid-tip {
 		max-width: 85%;
 	}
 
+	.msg_home ul li {
+		font-size: 12px ;
+	}
+
 	.search .select-style {
 		float: left;
-
-	}
-	.select-style {
 		width: 46% !important;
 	}
+
 
 
 .bookmark, .not_login {
@@ -1976,6 +1991,8 @@ span.wpcf7-not-valid-tip {
 .h-box-r h2 {
 	font-size: 20px;
 	padding-top: 15px;
+	max-width: 245px;
+    margin: 0px auto;
 }
 .wrap-bnr {
 	background-size: cover;
