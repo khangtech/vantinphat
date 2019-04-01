@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">

@@ -132,6 +132,7 @@ add_image_size('product_photo', 585, 324, true); // Custom Thumbnail Size call u
 add_image_size('product_thumb_photo', 166, 92, true); // Custom Thumbnail Size call using 
 
 add_image_size('hot_news_thumb', 270, 154, true); // Custom Thumbnail Size call using 
+add_theme_support( 'title-tag' );
 
 function vtp_function_admin_bar($content) {
     return (current_user_can('administrator')) ? $content : false ;

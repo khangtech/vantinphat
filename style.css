@@ -710,6 +710,10 @@ span.wpcf7-not-valid-tip {
 	padding: 0px;
 }
 
+.msg_home a {
+	color: #a91700;
+}
+
 .msg_home ul li {
 	list-style-type: circle;
 	padding: 5px 0px;

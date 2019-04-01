@@ -43,6 +43,7 @@
 
                          <option value="786">Huyện Nhà Bè</option>
                         <option value="784">Huyện Hóc Môn</option>
+                        <option value="999">Ngoài TPHCM</option>
             </select>
           </div>
           <div class="select-style">
@@ -135,7 +136,7 @@
                 <td ><a href="<?php echo $login_url; ?>" title="Vui lòng đăng nhập"><span class="masp"><?php the_title(); ?></span></a></span></td>
               <td ><?php the_field('district') ?> </td>
               <td><?php the_field('sell_price') ?> tỉ </td>
-              <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'thương lượng'  : 'cố định');  ?></td>
+              <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'Thương Lượng'  : 'Cố Định');  ?></td>
               <td class="m-hide"><?php echo $tra_gia; ?></td>
 
               <td class="m-hide"><a class="not_login" href="<?php echo $login_url; ?>" title="Vui lòng đăng nhập">Lưu tin</a></td>
@@ -191,7 +192,7 @@
               <td ><span class="masp"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></td>
               <td><?php the_field('district') ?> </td>
               <td><?php the_field('sell_price') ?> tỉ</td>
-              <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'thương lượng'  : 'cố định');  ?></td>
+              <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'Thương Lượng'  : 'Cố Định');  ?></td>
               <td class="m-hide"><?php echo $tra_gia; ?></td>
                 <td class="m-hide"><button type="submit" id="<?php the_ID(); ?>" class="bookmark" data-id="<?php the_ID(); ?>"><?php echo $label; ?></button></td>
             </tr>

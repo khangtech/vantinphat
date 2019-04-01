@@ -196,7 +196,7 @@ function kcn_filter_product() {
               $user_id =  get_current_user_id();
               $quan = get_field('district');
               $gia_ban = get_field('sell_price');
-              $thuong_luong = (get_field('negotiation') == true) ? 'thương lượng'  : 'cố định';
+              $thuong_luong = (get_field('negotiation') == true) ? 'Thương Lượng'  : 'Cố Định';
               $tra_gia = (get_field('buy_price') <> '') ? get_field('buy_price') . ' tỉ' : '-'  ;
               $id = get_the_ID();
               $masp = get_the_title();
@@ -340,7 +340,7 @@ function kcn_filter_product() {
               $user_id =  get_current_user_id();
               $quan = get_field('district');
               $gia_ban = get_field('sell_price');
-              $thuong_luong = (get_field('negotiation') == true) ? 'thương lượng'  : 'cố định';
+              $thuong_luong = (get_field('negotiation') == true) ? 'Thương Lượng'  : 'Cố Định';
              // $tra_gia = get_field('buy_price');
              $tra_gia = (get_field('buy_price') <> '') ? get_field('buy_price') . ' tỉ' : '-'  ;
 
