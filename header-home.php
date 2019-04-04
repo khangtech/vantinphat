@@ -59,7 +59,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
-        <h2>Shark Tank VTP</h2>
+        <h2>CHƯƠNG TRÌNH KẾT NỐI ĐẦU TƯ</h2>
         <div class="goivon clearfix">
           <div class="goivon-l">
 

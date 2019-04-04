@@ -110,7 +110,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="h-box2 clearfix">
-          <h2>Shark Tank VTP</h2>
+          <h2>CHƯƠNG TRÌNH KẾT NỐI ĐẦU TƯ</h2>
 
            <?php 
               global $user_login;  
