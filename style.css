@@ -252,9 +252,13 @@ body {
 	padding: 0px !important;
 } 
 
-.search-table table tr td a {
-	
+
+.search-table table tr.hot td a {
 	color: #7d0404;
+}
+
+.search-table table tr td a {
+	color: #2b2b2b;
 	text-transform: uppercase;
 	display: inline-block;
 	line-height: 30px;
@@ -409,14 +413,37 @@ span.wpcf7-not-valid-tip {
 .project {
 	background: #f79804;
 }
+.marquee {
+	margin-top: 180px;
+	
+	background: #970000;
+	color: #fff;
+	padding: 10px 5px;
+	overflow: hidden;
+
+}
+
+.marquee a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.marquee a:hover {
+	text-decoration: underline;
+}
+
+
 .project h2 {
 	text-align: center;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 40px;
-	margin: 120px 0 20px 0;
+	margin: 30px 0 20px 0;
 }
+
+
+
 .project-top-lst {
 	max-width: 64%;
 	margin: 0px auto;
@@ -1891,6 +1918,14 @@ span.wpcf7-not-valid-tip {
 		width: 47.7777%;
 		margin-right: 2%;
 		margin-bottom: 2%;
+	}
+
+	div.wpcf7-mail-sent-ok {
+		width: 100%;
+	}
+
+	.marquee {
+		margin-top: 10px;
 	}
 
 	.project-top-lst {

@@ -187,14 +187,37 @@
 
             ?>
 
+        
 
                <tr>
+
+               <?php if ( is_user_logged_in() ) { ?>
+
+
               <td ><span class="masp"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></td>
               <td><?php the_field('district') ?> </td>
               <td><?php the_field('sell_price') ?> tỉ</td>
               <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'Thương Lượng'  : 'Cố Định');  ?></td>
               <td class="m-hide"><?php echo $tra_gia; ?></td>
                 <td class="m-hide"><button type="submit" id="<?php the_ID(); ?>" class="bookmark" data-id="<?php the_ID(); ?>"><?php echo $label; ?></button></td>
+           
+           
+                <?php } else { 
+
+$login_url = "/wp-login.php";
+?>
+
+
+<td ><span class="masp"><a href="<?php echo $login_url; ?>"><?php the_title(); ?></a></span></td>
+              <td><?php the_field('district') ?> </td>
+              <td><?php the_field('sell_price') ?> tỉ</td>
+              <td><?php $thuong_luong = get_field('negotiation'); echo ($thuong_luong == true ? 'Thương Lượng'  : 'Cố Định');  ?></td>
+              <td class="m-hide"><?php echo $tra_gia; ?></td>
+                <td class="m-hide"><a class="not_login" href="<?php echo $login_url; ?>" title="Vui lòng đăng nhập">Lưu tin</a></td>                       
+             <?php  
+             } ?>
+
+
             </tr>
 
 

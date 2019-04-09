@@ -59,11 +59,22 @@
                      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                       <div class="sp-img"> 
                       <?php 
-                            $image = get_sub_field('danh_sach_hinh_dự_an'); ?>
-                          <img src="<?php echo $image ?>"/> 
+                            $image = wp_get_attachment_image_src(get_sub_field('danh_sach_hinh_dự_an'), 'single_hd'); 
+
+                           // $image = wp_get_attachment_image_src(get_sub_field('image'), 'full'); 
+			                      $thumb = wp_get_attachment_image_src(get_sub_field('danh_sach_hinh_dự_an'), 'single_thumb');
+                          //  print_r($image);
+                      ?>
+                            <a  data-fancybox="gallery" href="<?php echo $image[0]; ?>">
+	                            <img src="<?php echo $thumb[0]; ?>"/>
+                          </a> 
+                          
                       </div>
                      </div>
                 <?php   endwhile; endif; ?>
+
+
+
                  </div>
 
             </div>
@@ -105,4 +116,4 @@
 
 
 
-<?php get_footer(); ?>
+<?php get_footer('project'); ?>

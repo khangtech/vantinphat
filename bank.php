@@ -25,7 +25,7 @@
 
       <div class="col-sm-6 col-md-6 col-lg-6">
         <div class="box-cnt clearfix">
-          <h2>Bạn đang cần vốn? yên tâm! Chúng tôi sẽ lựa chọn và kết nối <br>
+          <h2>Bạn đang cần vốn? yên tâm! Chúng tôi sẽ lựa chọn và kết nối 
             Ngân hàng tốt nhất cho bạn!</h2>
           <div class="wrap-2col clearfix">
             <div class="wrap-2col-l clearfix">

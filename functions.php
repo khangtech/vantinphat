@@ -67,6 +67,17 @@ add_action( 'after_setup_theme', 'kcn_theme_setup');
     wp_enqueue_script('date_scripts');
 
 
+
+	wp_register_script( 'marquee_scripts',  get_template_directory_uri() . '/js/jquery.marquee.min.js', array(), '1.0.0', true );
+    wp_enqueue_script('marquee_scripts');
+
+
+	wp_register_script('pause_marquee_scripts',  get_template_directory_uri() . '/js/jquery.pause.js', array(), '1.0.0', true );
+    wp_enqueue_script('pause_marquee_scripts');
+
+
+
+
     wp_register_script( 'init_scripts',  get_template_directory_uri() . '/js/init.js', array(), '1.0.0', true );
     wp_enqueue_script('init_scripts');
 
@@ -127,12 +138,26 @@ function kcn_admin_scripts() {
 
 //add_action( 'init', 'kcn_theme_menu' );
 remove_filter('the_content','wpautop');
+remove_filter('the_excerpt','wpautop');
+
 add_filter('the_content', 'nl2br');
 add_image_size('product_photo', 585, 324, true); // Custom Thumbnail Size call using 
 add_image_size('product_thumb_photo', 166, 92, true); // Custom Thumbnail Size call using 
 
 add_image_size('hot_news_thumb', 270, 154, true); // Custom Thumbnail Size call using 
+
+add_image_size('project_thumb', 284, 205, true); // Custom Thumbnail Size call using 
+
+add_image_size('single_thumb', 250, 150, true); // Custom Thumbnail Size call using 
+
+add_image_size('single_hd', 1280, 1280, true); // Custom Thumbnail Size call using 
+
+
 add_theme_support( 'title-tag' );
+
+
+
+
 
 function vtp_function_admin_bar($content) {
     return (current_user_can('administrator')) ? $content : false ;
